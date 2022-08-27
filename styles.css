@@ -117,7 +117,7 @@ hr{
 .hero-img{
     max-width: 350px;
     display: block;
-    margin-left: 40px;
+    margin: auto;
 }
 
 .hero .hero-heading{
@@ -170,3 +170,9 @@ hr{
 }
 
 /**Read about root path and relative path**/
+
+.blog-image{
+    max-width: 350px;
+    display: block;
+    margin-left: 40px;
+}
