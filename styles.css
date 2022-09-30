@@ -146,8 +146,8 @@ hr {
     height: 55px;;
 }
 
-.para{
-    width:50%;
-    padding-bottom: 15px;
+.blog{
+    margin-left: 15px;
+    margin-right: 25px;
+    padding: 3px 3px;
 }
-
