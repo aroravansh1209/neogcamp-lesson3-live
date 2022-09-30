@@ -147,14 +147,7 @@ hr {
 }
 
 .para{
-    box-sizing: border-box;
-    border: 1px solid red;
     width:50%;
-    margin-left:auto;
-    margin-right: auto;
+    padding-bottom: 15px;
 }
 
-.heading{
-    text-align: center;
-    font-family:cursive;
-}
