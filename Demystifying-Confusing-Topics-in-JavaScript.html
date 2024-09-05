@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Blog One</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <nav class="navigation container">
+        <div class="nav-brand">Demystifying Confusing Topics in JavaScript</div>
+    </nav>
+    
+
+ <h1 class="blog heading">Demystifying Confusing Topics in JavaScript</h1>
+
+ <p class="blog"><strong>Table of contents</strong>
+    <br>
+    <br>
+    Concat()
+    <br>
+    every()
+    <br>
+    filter()
+    <br>
+    What is the difference between every() and filter()?
+    <br>
+    forEach()
+    <br>
+    map()
+    <br>
+    What is the difference between map() and forEach()?
+    <br>
+    rest parameter
+    <br>
+    spread Parameter
+    <br>
+    What is the difference between the spread and rest parameters?
+</p>
+
+ <p class="blog">When I began my journey of learning JavaScript, one aspect that often left me perplexed was some of the confusing topics of JavaScript. I soon realized that I wasn't alone in this confusion, many beginners stumble upon this issue and find themselves wondering about their purpose and how they differ from one another.</p>
+
+ <p class="blog"><strong>A Concat() </strong> 
+    <br>
+    <br>
+    Starting with the easiest method concat. This method is used to merge two or more arrays. This method does not change the current array but returns a new array.
+    <br>
+    <br>
+    const arr1 = ['a','b']
+    <br>
+    const arr2 = [1, 2]
+    <br>
+    const arr = arr1.concat(arr2)
+    <br>
+    //output => ['a','b', 1, 2]
+    <br>
+    <br>
+    When learning this concept, I was confused with the '+' operator, which is commonly referred to as an arithmetic operator. Interestingly, the '+' operator can also be used to join two or more arrays, but it behaves differently from the concat method. While the concat method returns a new array by combining the original arrays, the '+' operator converts the arrays to strings and concatenates their string representations. Let me provide an example to illustrate this distinction.
+    <br>
+    <br>
+    const arr1 = ['a','b']
+    <br>
+    const arr2 = [1, 2]
+    <br>
+    const arr = arr1 + arr2
+    <br>
+    //output => "a,b1,2"
+
+
+ </p>
+
+ <p class="blog"><strong>every()</strong>
+    <br>
+    The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value. The every() method is an iterative method. It calls a provided callbackFn function once for each element in an array, until the callbackFn returns a false value. The example of every() is as follows
+    <br>
+    <br>
+    const numbers = [1, 2, 3, 4, 5];
+    <br>
+    const allEven = numbers.every(num => num % 2 === 0);
+    <br>
+    console.log(allEven); // Output: false (not all numbers are even)
+
+ </p>
+
+ <p class="blog"><strong>filter()</strong> 
+    <br>
+    The JavaScript filter() Method is used to create a new array from a given array consisting of only those elements from the given array which satisfy a condition set by the argument method. The filter() method is an iterative method. It calls a provided callbackFn function once for each element in an array, and constructs a new array of all the values for which callbackFn returns a truthy value. Array elements that do not pass the callbackFn tests are not included in the new array.
+    <br>
+    <br>
+    const numbers = [1, 2, 3, 4, 5];
+    <br>
+    const evenNumbers = numbers.filter(num => num % 2 === 0);
+    <br>
+    console.log(evenNumbers); // Output: [2, 4] (filtered array with even numbers)
+
+ </p>
+
+ <p class="blog"><strong>What is the difference between every() and filter()?</strong> 
+    <br>
+    While both every() and filter() methods involve the use of a callback function and iterate through each element of an array while evaluating a condition, they have distinct purposes and outcomes.
+    <br>
+    <br>
+    The every() method tests whether all elements in an array satisfy a given condition. It iterates through each element and stops as soon as it encounters an element that doesn't meet the condition, returning false. If all elements pass the condition, it returns true. In other words, it checks if every element in the array satisfies the condition.
+    <br>
+    <br>
+    On the other hand, the filter() method creates a new array with all elements that pass a specific condition. It iterates through each element and includes elements in the resulting array if the condition returns true. It does not modify the original array. It returns a new array containing the filtered elements, based on the condition.
+ <p>
+    
+ <p class="blog"><strong>forEach()</strong> 
+    <br>
+    The forEach() method executes a provided function once for each array element. The forEach() method in JavaScript is used to execute a provided callback function once for each element in an array, in ascending order.
+    It iterates through each element in the array, sequentially executing the provided callback function for each element. The callback function can access the current element, its index, and the original array if needed.
+    <br>
+    <br>
+    const arr1 = ['a', 'b', 'c'];
+    <br>
+    <br>
+
+    arr1.forEach(element => console.log(element));
+    <br>
+    <br>
+
+    // Expected output: "a"
+    <br>
+    // Expected output: "b"
+    <br>
+    // Expected output: "c"
+
+ <p>
+    
+ <p class="blog"><strong>map()</strong> 
+    <br>
+    The map() method is used to create a new array by applying a provided callback function to each element of an existing array. It iterates over the elements of the array, executes the callback function for each element, and returns a new array with the results.
+    <br>
+    <br>
+    const array1 = [1, 4, 9, 16];
+    <br>
+    <br>
+
+    // Pass a function to map
+    <br>
+    const map1 = array1.map(x => x * 2);
+    <br>
+    <br>
+
+    console.log(map1);
+    <br>
+    // Expected output: Array [2, 8, 18, 32]
+
+ <p>
+    
+ <p class="blog"><strong>What is the difference between map() and forEach()?</strong> 
+    <br>
+    The map() method creates a new array by applying a provided callback function to each element of the original array. It returns a new array containing the results of the callback function applied to each element. The length and order of the new array will be the same as the original array. map() is commonly used when you want to transform or map each element of an array into a new value or object.
+    <br>
+    <br>
+    On the other hand, the forEach() method iterates over each element of the array and executes a callback function for each element. It does not return a new array; instead, it is typically used for performing side effects or operations on the elements, such as logging or modifying in place. forEach() is useful when you need to perform an action on each element without requiring a transformed or filtered result.   
+ <p>
+    
+ <p class="blog"><strong>rest parameter</strong>
+    <br>
+    The rest parameter is a useful feature that lets a function accept any number of arguments. It's represented by three dots (...) followed by a parameter name. The rest parameter gathers all the extra arguments passed to the function and stores them in an array. This makes it easy to work with functions that can handle different amounts of input. Instead of listing each argument separately, the rest parameter simplifies the process by collecting them all in one place. It's like having a basket to gather any number of items.
+    <br>
+    <br>
+    function printItems(...items) {
+    <br>    
+        console.log(items); //output => ["Apple","Banana","Orange"]
+    <br>
+    <br>    
+       
+       }
+    <br>
+    <br>   
+       
+       printItems("Apple", "Banana", "Orange");
+       
+    
+<p>
+    
+ <p class="blog"><strong>spread Parameter</strong> 
+ <br>
+ The spread syntax (...) is a powerful tool that lets you easily work with arrays. It allows you to take elements from an array and spread them out into different places. You can use it to copy arrays, merge arrays, or even pass multiple elements as arguments to functions. It simplifies working with arrays and gives you more flexibility in manipulating and combining data.
+ <br>
+ <br>
+ const array = [1, 2, 3];
+ <br>
+ const newArray = [...array];
+ <br>
+ console.log(newArray)//output => [1, 2, 3]
+<p>
+    
+ <p class="blog"><strong>What is the difference between the spread and rest parameters?</strong> 
+
+    The spread syntax, denoted by the three dots (...), is used to expand elements of an iterable (like an array or string) into individual elements. It allows you to create copies of arrays, merge arrays, or pass individual elements as function arguments. Essentially, it "spreads" the elements into a new context. For example, [...array] creates a new array with the elements of the array spread out.
+    <br>
+    <br>
+    On the other hand, the rest parameter, also denoted by the three dots (...), is used in function declarations to gather multiple arguments into an array. It allows functions to accept a variable number of arguments and treat them as an array. The rest parameter collects the "rest" of the arguments into an array, making it easier to work with variable-length argument lists within a function.
+<p>
+</body>
+</html>
